@@ -39,6 +39,7 @@
 // else {
 //   echo "prenom valide GG";
 // }
+$error = "Penser à remplir : ";
 $formulaire = array (
    "Mail" => $_POST['mail'],
    "Telephone" => $_POST['telephone'],
@@ -49,10 +50,15 @@ $formulaire = array (
 
  foreach ($formulaire as $key => $value) {
    if($value == ""){
-     echo $key .' '. 'erreur<br>';
+     $error = $error . " " . $key;
+     header("Location: ../index.php?toto=".$error);
+     // echo $key .' '. 'erreur<br>';
    }else{
-     echo $key .' '.'Good<br>';
+     header("Location: ../index.php?toto=".$error);
+     // echo $key .' '.'Good<br>';
    }
 
  }
+
+
 ?>

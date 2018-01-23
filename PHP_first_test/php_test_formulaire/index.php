@@ -1,5 +1,8 @@
-<body>
 
+<body>
+  <header>
+
+  </header>
    <form class="" action="pages/cible.php" method="post">
      <p>E-mail</p>
      <input type="email" name="mail" value="" method="post"></br>
@@ -13,7 +16,19 @@
      <input type="input" name="prenom" value="" method="post"></br>
 
      <input type="submit" value="Valider" />
-     <p>Appuyer pour envoyer.</p>
+     <p>Appuyer pour envoyer le mail.</p>
    </form>
+
+   <div>
+     <?php
+        if(isset($_GET['toto'])){
+      ?>
+       <p >
+    <?php echo $_GET['toto']; ?>
+       </p>
+    <?php
+           }
+    ?>
+   </div>
 
  </body>
